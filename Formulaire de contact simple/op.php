@@ -5,12 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $op = isset($_POST['op']) ? $_POST['op'] : '';
     $result = '';
 
-    f (!is_numeric($num1) || !is_numeric($num2)) {
-        $result = "Veuillez entrer des nombres valides.";
-    } else {
-        $num1 = (float)$num1;
-        $num2 = (float)$num2;
-            }
+  
     switch ($op) {
         case 'add':
             $result = $num1 + $num2;
@@ -35,5 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Résultat : $result";
 } else {
     echo "Méthode non autorisée.";
+
 }
+echo "<br><a href='index.html'>Revenir à la calculatrice</a>";
+
 ?>
