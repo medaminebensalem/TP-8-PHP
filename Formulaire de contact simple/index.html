@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+</head>
+<body>
+    <form method="post" action="op.php">
+        <label for="num1">Nombre 1</label><br>
+        <input type="text" name="num1" id="num1"><br><br>
+
+        <label for="num2">Nombre 2</label><br>
+        <input type="text" name="num2" id="num2"><br><br>
+
+        <label for="op">Opération</label><br>
+        <select name="op" id="op">
+            <option value="">--------</option>
+            <option value="add">Addition</option>
+            <option value="soustraction">Soustraction</option>
+            <option value="multiplication">Multiplication</option>
+            <option value="division">Division</option>
+        </select><br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
