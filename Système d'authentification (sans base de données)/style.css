@@ -1,0 +1,27 @@
+body{
+    padding:50px;
+    background-color: rgb(224, 233, 233);
+    text-align: justify;
+}
+.container{
+    max-width: 600px;
+    margin:0 auto;
+    padding:50px;
+    box-shadow: rgba(9, 9, 179, 0.2) 0px 7px 29px 0px;
+}
+.form-group{
+    margin-bottom:30px;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 20%;
+    border-radius: 40%;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    
+    
+    }

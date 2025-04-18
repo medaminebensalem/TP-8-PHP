@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculatrice</title>
+    <title>tp 2</title>
 </head>
 <body>
-    <form method="post" action="op.php">
-        <label for="num1">Nombre 1</label><br>
-        <input type="text" name="num1" id="num1"><br><br>
-
-        <label for="num2">Nombre 2</label><br>
-        <input type="text" name="num2" id="num2"><br><br>
-
-        <label for="op">Opération</label><br>
-        <select name="op" id="op">
-            <option value="">--------</option>
-            <option value="add">Addition</option>
-            <option value="soustraction">Soustraction</option>
-            <option value="multiplication">Multiplication</option>
-            <option value="division">Division</option>
+    <form method="post" action="contact.php"> 
+        Nom:<br>
+        <input type="text"><br>
+        Prenom : <br>
+        <input type="text"><br>
+        Groupe : <br>
+        <input type="number" ><br>
+        Sujet : <br>
+        <input type="text"> <br>
+        Description : <br>
+         <textarea title="text"></textarea><br>
+         Date De Debut : <br> 
+         <input type="date"> <br>
+         Date Fin : <br>
+         <input type="date"> <br>
+         Encadrement : <br>
+         <select name="Encadrement" >
+        <option value="------">--------</option>
+         <option value="Prof 1">Prof 1</option>
+         <option value="Prof 2">Prof 2</option>
+         <option value="Prof 3">Prof 3</option>
+         <option value="Prof 4">Prof 4</option>
         </select><br><br>
+         <input type="submit"> <input type="reset">
+         
 
-        <input type="submit" value="Envoyer">
     </form>
 </body>
 </html>
