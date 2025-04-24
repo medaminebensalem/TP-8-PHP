@@ -7,7 +7,7 @@ function genererMotDePasse($longueur) {
 
     $motDePasse = '';
 
-    // Ajout garanti d'un caractère de chaque type
+   
     $motDePasse .= $lettres[rand(0, strlen($lettres) - 1)];
     $motDePasse .= $chiffres[rand(0, strlen($chiffres) - 1)];
     $motDePasse .= $speciaux[rand(0, strlen($speciaux) - 1)];
@@ -16,7 +16,7 @@ function genererMotDePasse($longueur) {
         $motDePasse .= $tous[rand(0, strlen($tous) - 1)];
     }
 
-    // Mélange aléatoire des caractères
+   
     $motDePasse = str_shuffle($motDePasse);
 
     return $motDePasse;

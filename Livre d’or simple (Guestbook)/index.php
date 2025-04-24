@@ -28,7 +28,7 @@
 </head>
 <body>
 
-<h1>📝 Livre d’or</h1>
+<h1> Livre d’or</h1>
 
 <form method="post" action="">
     <input type="text" name="nom" placeholder="Votre nom" required>
@@ -39,7 +39,7 @@
 <?php
 $fichier = "messages.txt";
 
-// Enregistrement du message
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = htmlspecialchars(trim($_POST["nom"]));
     $message = htmlspecialchars(trim($_POST["message"]));
@@ -48,15 +48,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($nom && $message) {
         $ligne = "$date | $nom : $message\n";
         file_put_contents($fichier, $ligne, FILE_APPEND);
-        echo "<p style='color: green;'>Merci pour votre message !</p>";
+        echo "<p style='color: green;'>Merci pour votre message </p>";
     }
 }
 
-// Affichage des messages
 if (file_exists($fichier)) {
     $lignes = file($fichier, FILE_IGNORE_NEW_LINES);
 
-    echo "<h2>📬 Messages :</h2>";
+    echo "<h2> Messages :</h2>";
     foreach ($lignes as $ligne) {
         // Exemple de ligne : 18/04/2025 16:30:12 | Jean : Bonjour tout le monde
         $parties = explode(" | ", $ligne, 2);

@@ -31,10 +31,10 @@
 </head>
 <body>
 
-<h1>🎯 Mini Quiz</h1>
+<h1> Mini Quiz</h1>
 
 <?php
-// Questions et réponses
+
 $quiz = [
     [
         "question" => "Quelle est la capitale du Maroc ?",
@@ -42,12 +42,12 @@ $quiz = [
         "correct" => 2
     ],
     [
-        "question" => "Quel langage est utilisé pour le développement web côté client ?",
-        "options" => ["PHP", "Java", "Python", "JavaScript"],
+        "question" => "Quel est le nom du joueur num 7 d'equipe maroc?",
+        "options" => ["amine", "hakimi", "ziyech", "hafidi"],
         "correct" => 3
     ],
     [
-        "question" => "Combien de bits contient un octet ?",
+        "question" => "Combien de bits contient un octe?",
         "options" => ["4", "8", "16", "32"],
         "correct" => 1
     ],
@@ -57,7 +57,7 @@ $quiz = [
         "correct" => 1
     ],
     [
-        "question" => "HTML est un langage de...",
+        "question" => "c est un langage de...",
         "options" => ["programmation", "marquage", "script", "compilation"],
         "correct" => 1
     ]
@@ -76,13 +76,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $style = '';
             if ($user_answer == $i) {
                 $style = $is_correct ? "correct" : "wrong";
-                echo "<p class='$style'>➤ " . htmlspecialchars($option) . "</p>";
+                echo "<p class='$style'> " . htmlspecialchars($option) . "</p>";
             } else {
-                echo "<p>• " . htmlspecialchars($option) . "</p>";
+                echo "<p> " . htmlspecialchars($option) . "</p>";
             }
         }
         if (!$is_correct) {
-            echo "<p class='correct'>✔ Réponse correcte : " . htmlspecialchars($q["options"][$q["correct"]]) . "</p>";
+            echo "<p class='correct'> Réponse correcte : " . htmlspecialchars($q["options"][$q["correct"]]) . "</p>";
         }
         echo "</div>";
 
@@ -91,11 +91,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    echo "<h3>✅ Score final : $score / " . count($quiz) . "</h3>";
-    echo "<a href=''>Rejouer</a>";
-
+    echo "<h3> Score final : $score / " . count($quiz) . "</h3>";
+   
 } else {
-    // Formulaire du quiz
+   
     echo "<form method='post'>";
     foreach ($quiz as $index => $q) {
         echo "<div class='question'>";
