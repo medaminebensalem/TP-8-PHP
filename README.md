@@ -40,7 +40,4 @@ Projet réalisé dans le cadre de l'apprentissage du développement web.
 
 
 
-## 📜 Licence
-
-Ce projet est open source et sous licence [MIT](LICENSE).
 
